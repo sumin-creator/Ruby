@@ -3,7 +3,7 @@ require 'open-uri'
 require 'uri'
 require 'json'
 
-APP_ID = 'dj0zaiZpPWxPNFl0STFYSDE0cSZzPWNvbnN1bWVyc2VjcmV0Jng9Njg-'
+APP_ID = '使用するID'
 
 def geocode(address)
   url = "https://map.yahooapis.jp/geocode/V1/geoCoder"
