@@ -5,7 +5,7 @@ require 'cgi'
 
 str = ARGV[0]
 
-ID = "jsqAbSa3aKX49y0tRjEY"
+ID = "使用するID"
 n = 1
 URI.open("https://ci.nii.ac.jp/books/opensearch/search?title=#{CGI.escape(str)}&format=json&appid=#{ID}") do |f|
   x = JSON.parse(f.read)
