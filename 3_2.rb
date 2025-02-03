@@ -5,7 +5,7 @@ require 'uri'
 require 'cgi'
 
 class YOLP
-  def initialize(app_id = "dj0zaiZpPWxPNFl0STFYSDE0cSZzPWNvbnN1bWVyc2VjcmV0Jng9Njg-")
+  def initialize(app_id = "使用するID")
     @app_id = app_id
     @rx = 6378137.000
     @ry = 6356752.314245
