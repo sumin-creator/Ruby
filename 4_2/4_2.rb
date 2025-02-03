@@ -4,7 +4,7 @@ require 'open-uri'
 require 'json'
 require 'cgi'
 
-ID = "jsqAbSa3aKX49y0tRjEY"
+ID = "使用するID"
 
 get '/' do
   erb :index
@@ -99,7 +99,7 @@ def fetch_library_address(library_url)
   end
 end
 
-APP_ID = 'dj0zaiZpPWxPNFl0STFYSDE0cSZzPWNvbnN1bWVyc2VjcmV0Jng9Njg-'
+APP_ID = '使用するID'
 
 def geocode(address)
   url = "https://map.yahooapis.jp/geocode/V1/geoCoder"
