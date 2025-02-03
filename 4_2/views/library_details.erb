@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>図書館の詳細</title>
+</head>
+<body>
+    <h1>図書館の詳細</h1>
+
+    <% @libraries.each_with_index do |library, index| %>
+      <h2><%= library[:name] %></h2>
+      <p>住所: <%= library[:address] %></p>
+      
+      <% if library[:ido] && library[:keido] %>
+          <h3>地図</h3>
+          <iframe 
+              src="https://www.openstreetmap.org/export/embed.html?bbox=<%= library[:keido]-0.01 %>,<%= library[:ido]-0.01 %>,<%= library[:keido]+0.01 %>,<%= library[:ido]+0.01 %>&layer=mapnik&marker=<%= library[:ido] %>,<%= library[:keido] %>" 
+              width="800" 
+              height="600" 
+              frameborder="0" 
+              allowfullscreen>
+          </iframe>
+      <% else %>
+          <p>地図は表示できませんでした。</p>
+      <% end %>
+
+      <hr>
+    <% end %>
+    
+    <a href="/">ホームへ戻る</a>
+</body>
+</html>

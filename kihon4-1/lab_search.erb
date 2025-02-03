@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title><%= @lab_name %> - Members</title>
+</head>
+<body>
+  <h1>研究室名: <%= @lab_name %></h1>
+  <ul>
+    <% @members.each do |member| %>
+      <li><%= member.member_name %> - <%= member.position %></li>
+    <% end %>
+  </ul>
+</body>
+</html>

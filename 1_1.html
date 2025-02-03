@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北海道大学 地図表示</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            border: 1px solid #ccc;
+            margin: 20px auto;
+        }
+        #footer {
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <iframe
+        id="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=141.3371%2C43.0710%2C141.3419%2C43.0760&amp;layer=mapnik&amp;marker=43.0747%2C141.3408"
+        allowfullscreen
+    ></iframe>
+    <div id="footer">北海道大学</div>
+</body>
+</html>

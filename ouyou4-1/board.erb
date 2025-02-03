@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>掲示板</title>
+</head>
+<body>
+  <h1>掲示板</h1>
+  <p>こんにちは、<%= @user_id %> さん</p>
+  <a href="/logout">ログアウト</a>
+  <h2>メッセージ一覧</h2>
+  <ul>
+    <% @messages.each do |message| %>
+      <li><strong><%= message['user_id'] %>:</strong> <%= message['message'] %> - <%= message['created_at'] %></li>
+    <% end %>
+  </ul>
+  <h2>メッセージを投稿</h2>
+  <form method="post" action="/board">
+    <textarea name="message" rows="4" cols="50"></textarea><br>
+    <input type="submit" value="投稿">
+  </form>
+</body>
+</html>

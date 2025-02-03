@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地図表示 - 複数のライブラリ</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .map-container {
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 80%;
+        }
+        .map {
+            border: 1px solid #ccc;
+            margin: 10px auto;
+        }
+        .info {
+            margin-top: 10px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>指定範囲内のライブラリ一覧</h1>
+    <div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.72724511%2C35.70964352%2C139.74724511%2C35.729643519999996&amp;layer=mapnik&amp;marker=35.71964352%2C139.73724511"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都文京区大塚3-29-1 B1F</p>
+        <p>名前: 筑波大学 附属図書館 大塚図書館</p>
+        <p>緯度: 35.71964352</p>
+        <p>経度: 139.73724511</p>
+        <p>距離: 4187.54 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.75277932%2C35.70203394%2C139.77277931999998%2C35.722033939999996&amp;layer=mapnik&amp;marker=35.71203394%2C139.76277932"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都文京区本郷7-3-1</p>
+        <p>名前: 東京大学 経済学図書館</p>
+        <p>緯度: 35.71203394</p>
+        <p>経度: 139.76277932</p>
+        <p>距離: 5728.0 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.70078308%2C35.649618960000005%2C139.72078308%2C35.66961896&amp;layer=mapnik&amp;marker=35.65961896%2C139.71078308"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都渋谷区渋谷4-4-25</p>
+        <p>名前: 青山学院大学 図書館</p>
+        <p>緯度: 35.65961896</p>
+        <p>経度: 139.71078308</p>
+        <p>距離: 3868.21 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.69899474000002%2C35.71003991%2C139.71899474%2C35.730039909999995&amp;layer=mapnik&amp;marker=35.72003991%2C139.70899474"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都豊島区目白1-5-1</p>
+        <p>名前: 学習院大学 図書館</p>
+        <p>緯度: 35.72003991</p>
+        <p>経度: 139.70899474</p>
+        <p>距離: 2951.45 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.69899474000002%2C35.71003991%2C139.71899474%2C35.730039909999995&amp;layer=mapnik&amp;marker=35.72003991%2C139.70899474"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都豊島区目白1-5-1</p>
+        <p>名前: 学習院大学 図書館</p>
+        <p>緯度: 35.72003991</p>
+        <p>経度: 139.70899474</p>
+        <p>距離: 2951.45 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.69899474000002%2C35.71003991%2C139.71899474%2C35.730039909999995&amp;layer=mapnik&amp;marker=35.72003991%2C139.70899474"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都豊島区目白1-5-1</p>
+        <p>名前: 学習院大学 図書館</p>
+        <p>緯度: 35.72003991</p>
+        <p>経度: 139.70899474</p>
+        <p>距離: 2951.45 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.73282224000002%2C35.639254130000005%2C139.75282224%2C35.65925413&amp;layer=mapnik&amp;marker=35.64925413%2C139.74282224"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都港区三田2-15-45</p>
+        <p>名前: 慶應義塾大学 三田メディアセンター</p>
+        <p>緯度: 35.64925413</p>
+        <p>経度: 139.74282224</p>
+        <p>距離: 6107.85 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.70164983%2C35.64564442%2C139.72164983%2C35.66564442&amp;layer=mapnik&amp;marker=35.65564442%2C139.71164983"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都渋谷区東4-10-28</p>
+        <p>名前: 国学院大学 図書館</p>
+        <p>緯度: 35.65564442</p>
+        <p>経度: 139.71164983</p>
+        <p>距離: 4317.04 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.64837461000002%2C35.61957393%2C139.66837461%2C35.63957393&amp;layer=mapnik&amp;marker=35.62957393%2C139.65837461"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都世田谷区駒沢1-23-1</p>
+        <p>名前: 駒澤大学 図書館</p>
+        <p>緯度: 35.62957393</p>
+        <p>経度: 139.65837461</p>
+        <p>距離: 8227.7 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.66683930000002%2C35.63394773%2C139.6868393%2C35.65394773&amp;layer=mapnik&amp;marker=35.64394773%2C139.6768393"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都世田谷区太子堂1-7-57</p>
+        <p>名前: 昭和女子大学 図書館</p>
+        <p>緯度: 35.64394773</p>
+        <p>経度: 139.6768393</p>
+        <p>距離: 6049.56 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.74405561%2C35.68712141%2C139.76405560999999%2C35.70712141&amp;layer=mapnik&amp;marker=35.69712141%2C139.75405561"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都千代田区神田神保町3-8</p>
+        <p>名前: 専修大学 図書館 神田分館</p>
+        <p>緯度: 35.69712141</p>
+        <p>経度: 139.75405561</p>
+        <p>距離: 4587.64 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.72610368000002%2C35.70544673%2C139.74610368%2C35.725446729999994&amp;layer=mapnik&amp;marker=35.71544673%2C139.73610368"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都文京区小日向3-4-14</p>
+        <p>名前: 拓殖大学 図書館</p>
+        <p>緯度: 35.71544673</p>
+        <p>経度: 139.73610368</p>
+        <p>距離: 3802.85 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.66439248%2C35.62765118%2C139.68439247999999%2C35.64765118&amp;layer=mapnik&amp;marker=35.63765118%2C139.67439248"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都世田谷区下馬3-34-1</p>
+        <p>名前: 日本大学 図書館 三軒茶屋キャンパス分館</p>
+        <p>緯度: 35.63765118</p>
+        <p>経度: 139.67439248</p>
+        <p>距離: 6780.39 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.74623308%2C35.69026557%2C139.76623307999998%2C35.71026557&amp;layer=mapnik&amp;marker=35.70026557%2C139.75623308"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都千代田区神田三崎町1-3-2</p>
+        <p>名前: 日本大学 経済学部図書館</p>
+        <p>緯度: 35.70026557</p>
+        <p>経度: 139.75623308</p>
+        <p>距離: 4822.5 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.7308762%2C35.6856018%2C139.7508762%2C35.7056018&amp;layer=mapnik&amp;marker=35.6956018%2C139.7408762"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都千代田区富士見2-17-1 ボアソナード・タワー18F</p>
+        <p>名前: 法政大学 イノベーション・マネジメント研究センター</p>
+        <p>緯度: 35.6956018</p>
+        <p>経度: 139.7408762</p>
+        <p>距離: 3388.76 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.7308762%2C35.6856018%2C139.7508762%2C35.7056018&amp;layer=mapnik&amp;marker=35.6956018%2C139.7408762"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都千代田区富士見2-17-1</p>
+        <p>名前: 法政大学 図書館</p>
+        <p>緯度: 35.6956018</p>
+        <p>経度: 139.7408762</p>
+        <p>距離: 3388.76 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.7308762%2C35.6856018%2C139.7508762%2C35.7056018&amp;layer=mapnik&amp;marker=35.6956018%2C139.7408762"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都千代田区富士見2-17-1</p>
+        <p>名前: 法政大学 図書館</p>
+        <p>緯度: 35.6956018</p>
+        <p>経度: 139.7408762</p>
+        <p>距離: 3388.76 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.75152174000002%2C35.68759101%2C139.77152174%2C35.707591009999994&amp;layer=mapnik&amp;marker=35.69759101%2C139.76152174"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都千代田区神田駿河台1-1</p>
+        <p>名前: 明治大学 図書館</p>
+        <p>緯度: 35.69759101</p>
+        <p>経度: 139.76152174</p>
+        <p>距離: 5263.87 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.75152174000002%2C35.68759101%2C139.77152174%2C35.707591009999994&amp;layer=mapnik&amp;marker=35.69759101%2C139.76152174"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都千代田区神田駿河台1-1</p>
+        <p>名前: 明治大学 図書館</p>
+        <p>緯度: 35.69759101</p>
+        <p>経度: 139.76152174</p>
+        <p>距離: 5263.87 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.69326423%2C35.72075522%2C139.71326423%2C35.74075522&amp;layer=mapnik&amp;marker=35.73075522%2C139.70326423"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都豊島区西池袋3-34-1</p>
+        <p>名前: 立教大学 図書館</p>
+        <p>緯度: 35.73075522</p>
+        <p>経度: 139.70326423</p>
+        <p>距離: 4099.56 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.69326423%2C35.72075522%2C139.71326423%2C35.74075522&amp;layer=mapnik&amp;marker=35.73075522%2C139.70326423"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都豊島区西池袋3-34-1</p>
+        <p>名前: 立教大学 図書館</p>
+        <p>緯度: 35.73075522</p>
+        <p>経度: 139.70326423</p>
+        <p>距離: 4099.56 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.70904706000002%2C35.69914698%2C139.72904706%2C35.71914698&amp;layer=mapnik&amp;marker=35.70914698%2C139.71904706"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都新宿区西早稲田1-6-1</p>
+        <p>名前: 早稲田大学 図書館 (中央図書館)</p>
+        <p>緯度: 35.70914698</p>
+        <p>経度: 139.71904706</p>
+        <p>距離: 2207.46 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.70904706000002%2C35.69914698%2C139.72904706%2C35.71914698&amp;layer=mapnik&amp;marker=35.70914698%2C139.71904706"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都新宿区西早稲田1-6-1  11号館10階</p>
+        <p>名前: 早稲田大学 商学研究図書室</p>
+        <p>緯度: 35.70914698</p>
+        <p>経度: 139.71904706</p>
+        <p>距離: 2207.46 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.65149701%2C35.60351741%2C139.67149701%2C35.62351741&amp;layer=mapnik&amp;marker=35.61351741%2C139.66149701"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都世田谷区等々力6-39-15</p>
+        <p>名前: 産業能率大学 自由が丘キャンパス図書館</p>
+        <p>緯度: 35.61351741</p>
+        <p>経度: 139.66149701</p>
+        <p>距離: 9705.96 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.65513035%2C35.67998104%2C139.67513035%2C35.69998104&amp;layer=mapnik&amp;marker=35.68998104%2C139.66513035"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都杉並区和田1-2-1</p>
+        <p>名前: 立正佼成会 付属佼成図書館</p>
+        <p>緯度: 35.68998104</p>
+        <p>経度: 139.66513035</p>
+        <p>距離: 3484.18 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.70929055000002%2C35.72305539%2C139.72929055%2C35.743055389999995&amp;layer=mapnik&amp;marker=35.73305539%2C139.71929055"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都豊島区東池袋2-51-4</p>
+        <p>名前: 帝京平成大学 メディアライブラリーセンター</p>
+        <p>緯度: 35.73305539</p>
+        <p>経度: 139.71929055</p>
+        <p>距離: 4585.23 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.73319322%2C35.67153115%2C139.75319321999999%2C35.691531149999996&amp;layer=mapnik&amp;marker=35.68153115%2C139.74319322"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都千代田区隼町4番1号</p>
+        <p>名前: 独立行政法人 日本芸術文化振興会</p>
+        <p>緯度: 35.68153115</p>
+        <p>経度: 139.74319322</p>
+        <p>距離: 3846.68 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.67014952%2C35.65209575%2C139.69014951999998%2C35.67209575&amp;layer=mapnik&amp;marker=35.66209575%2C139.68014952"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 東京都目黒区駒場4-3-55</p>
+        <p>名前: 公益財団法人 日本近代文学館</p>
+        <p>緯度: 35.66209575</p>
+        <p>経度: 139.68014952</p>
+        <p>距離: 4112.27 m</p>
+    </div>
+</div>
+
+<div class="map-container">
+    <iframe
+        class="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=139.60927118%2C35.65454663%2C139.62927118%2C35.674546629999995&amp;layer=mapnik&amp;marker=35.66454663%2C139.61927118"
+        allowfullscreen
+    ></iframe>
+    <div class="info">
+        <p>住所: 世田谷区八幡山3-10-20</p>
+        <p>名前: 公益財団法人 大宅壮一文庫</p>
+        <p>緯度: 35.66454663</p>
+        <p>経度: 139.61927118</p>
+        <p>距離: 8270.39 m</p>
+    </div>
+</div>
+
+</body>
+</html>

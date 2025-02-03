@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>検索結果</title>
+</head>
+<body>
+  <h1>検索結果</h1>
+  <% if @results.empty? %>
+    <p>該当する書籍は見つかりませんでした。</p>
+  <% else %>
+    <ul>
+      <% @results.each do |book| %>
+        <li>
+          <a href="/libraries/<%= book[:id] %>"><%= book[:title] %></a>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <p><a href="/">別の検索をする</a></p>
+</body>
+</html>

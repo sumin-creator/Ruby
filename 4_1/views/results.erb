@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索結果</title>
+</head>
+<body>
+    <h1>図書館検索結果</h1>
+    <% if libraries.empty? %>
+        <p>指定されたIDに対応する図書館は見つかりませんでした。</p>
+    <% else %>
+        <% libraries.each do |library| %>
+            <h2>
+                <a href="http://localhost:8080/<%= library[:name] %>.html" target="_blank">
+                    <%= library[:name] %>
+                </a>
+            </h2>
+            <p>住所: <%= library[:address] %></p>
+            <% if library[:map_page] %>
+            <% else %>
+                <p>地図は表示できませんでした。</p>
+            <% end %>
+            <hr>
+        <% end %>
+    <% end %>
+    <a href="/">再度検索する</a>
+</body>
+</html>

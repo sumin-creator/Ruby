@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地図表示</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        #map {
+            border: 1px solid #ccc;
+            margin: 20px auto;
+        }
+        #info {
+            margin-top: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <iframe
+        id="map"
+        width="800"
+        height="600"
+        frameborder="0"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=135.92482838%2C35.0631392%2C135.94482838%2C35.0831392&amp;layer=mapnik&amp;marker=35.0731392%2C135.93482838"
+        allowfullscreen
+    ></iframe>
+    <div id="info">
+        <p>住所: 滋賀県草津市下物町１０９１</p>
+        <p>名前: 琵琶湖博物館</p>
+    </div>
+</body>
+</html>

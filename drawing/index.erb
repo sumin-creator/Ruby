@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>リアルタイムお絵かきアプリ</title>
+  <style>
+    canvas {
+      border: 1px solid #000;
+    }
+  </style>
+</head>
+<body>
+  <h1>お絵かき共有アプリ</h1>
+  <canvas id="drawingCanvas" width="800" height="600"></canvas>
+
+  <script>
+    const canvas = document.getElementById('drawingCanvas');
+    const ctx = canvas.getContext('2d');
+    const ws = new WebSocket('ws://192.168.2.146:2000/');
+
+    let drawing = false;
+
+    canvas.addEventListener('mousedown', (e) => {
+      drawing = true;
+      draw(e);
+    });
+
+    canvas.addEventListener('mouseup', () => {
+      drawing = false;
+      ctx.beginPath();
+    });
+
+    canvas.addEventListener('mousemove', (e) => {
+      if (!drawing) return;
+      draw(e);
+    });
+
+    function draw(e) {
+      ctx.lineWidth = 2;
+      ctx.lineCap = 'round';
+      ctx.strokeStyle = 'black';
+      ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+
+      const data = { x: e.clientX - canvas.offsetLeft, y: e.clientY - canvas.offsetTop };
+      ws.send(JSON.stringify(data));
+    }
+
+    ws.onmessage = (msg) => {
+      const data = JSON.parse(msg.data);
+      ctx.lineTo(data.x, data.y);
+      ctx.stroke();
+      ctx.beginPath();
+      ctx.moveTo(data.x, data.y);
+    };
+
+    ws.onopen = () => {
+      ws.onmessage = (msg) => {
+        const data = JSON.parse(msg.data);
+        ctx.lineTo(data.x, data.y);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(data.x, data.y);
+      };
+    };
+  </script>
+</body>
+</html>
